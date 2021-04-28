@@ -8,12 +8,14 @@ class Bank:
 
     def withdrawl_amount(self,amount):
         balance_amount = 500000 - amount
-        print("you have withdrawn amount "+str(amount) +". Your remaining balance is "+ str(balance_amount))
+        print("Your withdrawled amount "+str(amount) +". Your remaining balance is "+ str(balance_amount))
 
 
 def processing():
-    card_number = input("insert your card number:- ")
-    pin_number  = input("enter your pin number:- ")
+    name = input("Enter your Name : ")
+    print("Hi "+str(name)+" enter the Following ")
+    card_number = input("Enter your card number :-) ")
+    pin_number  = input("Enter your pin number :-) ")
 
     user1 =  Bank(card_number ,pin_number)
 
@@ -24,7 +26,7 @@ def processing():
     if (activity == 1):
         user1.check_balance()
     elif (activity == 2):
-        amount = int(input("enter the amount:- "))
+        amount = int(input("Enter the amount to be Withdrawled :-) "))
         user1.withdrawl_amount(amount)
     else:
         print("enter a valid number")
